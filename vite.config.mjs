@@ -2,7 +2,6 @@ import * as child from "child_process";
 import fs from "fs";
 import path from "path";
 import { defineConfig } from "vite";
-import mkcert from "vite-plugin-mkcert";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 import solidPlugin from "vite-plugin-solid";
 import topLevelAwait from "vite-plugin-top-level-await";
@@ -22,7 +21,6 @@ export default defineConfig({
         solidPlugin(),
         wasm(),
         topLevelAwait(),
-        mkcert(),
         nodePolyfills(),
     ],
     server: {
